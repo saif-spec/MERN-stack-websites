@@ -1,0 +1,52 @@
+.book-details-container {
+
+  margin-top: 2em;
+}
+
+
+.bookinfo{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.bookinfo img{
+
+    height: auto;
+    width: 15em;
+}
+
+
+.card-bookDet{
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.bookDet-similarBks {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.similar-book-item{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.similar-book-item-lv2{
+
+  display: flex;
+  gap: 0.5em;
+}

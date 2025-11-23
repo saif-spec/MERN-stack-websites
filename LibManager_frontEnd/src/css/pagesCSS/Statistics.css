@@ -1,0 +1,299 @@
+/* Pie Chart Styles */
+.pie-chart-container {
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.pie-chart {
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(
+    #3498db 0% 36%,
+    #2ecc71 36% 58.4%,
+    #e74c3c 58.4% 74%,
+    #f39c12 74% 86%,
+    #9b59b6 86% 100%
+  );
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pie-segment {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+
+.pie-legend {
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.legend-item:hover {
+
+  background: #e9ecef;
+}
+
+.legend-color {
+
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend-label {
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Suggestions List */
+.suggestions-list {
+
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.suggestion-item {
+
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.suggestion-item:hover {
+
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-book {
+
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.suggestion-stats {
+
+  font-size: 12px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .pie-chart-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .pie-chart {
+
+    width: 150px;
+    height: 150px;
+  }
+  
+  .pie-legend {
+
+    width: 100%;
+  }
+}
+
+.stats-card {
+
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.popular-book-item div{
+
+  display: flex;
+  gap: 1em;
+}
+
+.popular-book-item {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+
+.bar-chart-container {
+
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.bar-chart {
+
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-between;
+  height: 200px;
+  gap: 15px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.bar-column {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.bar {
+
+  width: 40px;
+  background: linear-gradient(to top, #3498db, #2980b9);
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: all 0.3s ease;
+  min-height: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bar:hover {
+
+  background: linear-gradient(to top, #2980b9, #2471a3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bar-value {
+
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bar-label {
+
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Y-axis labels */
+.bar-chart::before {
+
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #bdc3c7;  
+}
+
+.borrower-item div {
+
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  column-gap: 0.2em;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.borrower-item {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.warning-item {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1em;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+  .bar-chart {
+
+    height: 150px;
+    gap: 8px;
+  }
+  
+  .bar {
+
+    width: 30px;
+  }
+  
+  .bar-value {
+
+    font-size: 10px;
+  }
+  
+  .bar-label {
+
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,28 @@
+.login-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+
+.loginBox {
+  
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.form-group{
+
+  margin: 2em 0;
+}
