@@ -21,5 +21,6 @@ cd frontend
 npm install
 npm start
 
-### Notes :
+## Notes :
 - the 'Statistics' page is static and not connected with the backend (yet)
+- currently there is only ERN and no mongoDB configurations, just front-end and back-end endpoints
